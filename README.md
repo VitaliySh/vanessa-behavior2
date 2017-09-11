@@ -6,7 +6,7 @@
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в разделе  [Releases](./releases/latest)
+Текущий релиз в разделе  [Releases](https://github.com/silverbulleters/vanessa-behavior2/releases/latest)
 
 Ночная сборка ветки **develop**:
 1. [zip](http://ci.silverbulleters.org/job/vanessa-behavior2/job/develop/lastSuccessfulBuild/artifact/vanessa-behavior.zip) - `unzip -o ./vanessa-behavior.zip`
