@@ -4289,6 +4289,7 @@
 			<Form>ВыборИзвестногоШага</Form>
 			<Form>ЗаписьJSON</Form>
 			<Form>РедактированиеТаблицы</Form>
+			<Form>ИсследовательФормы</Form>
 			<Template>ОтчетТестирования</Template>
 			<Template>ШаблонПеревода</Template>
 		</ChildObjects>
