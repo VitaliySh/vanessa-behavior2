@@ -5738,6 +5738,39 @@
 													</ToolTip>
 													<ExtendedTooltip name="СценарийПоведенияКодРасширеннаяПодсказка" id="1326"/>
 													<ChildItems>
+														<UsualGroup name="ГруппаВыполнитьКод" id="1720">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа выполнить код</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа выполнить код</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ExtendedTooltip name="ГруппаВыполнитьКодРасширеннаяПодсказка" id="1721"/>
+															<ChildItems>
+																<Button name="ВыполнитьКодНаКлиенте" id="1722">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.ВыполнитьКодНаКлиенте</CommandName>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Выполнить на клиенте</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="ВыполнитьКодНаКлиентеРасширеннаяПодсказка" id="1723"/>
+																</Button>
+																<Button name="ВыполнитьКодНаСервере" id="1724">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.ВыполнитьКодНаСервере</CommandName>
+																	<ExtendedTooltip name="ВыполнитьКодНаСервереРасширеннаяПодсказка" id="1725"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
 														<TextDocumentField name="СгенерированныйСценарийКод" id="854">
 															<DataPath>Объект.СгенерированныйСценарийКод</DataPath>
 															<TitleLocation>None</TitleLocation>
@@ -18100,6 +18133,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИсследовательФормы</Action>
+		</Command>
+		<Command name="ВыполнитьКодНаКлиенте" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код на клиенте</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код на клиенте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьКодНаКлиенте</Action>
+		</Command>
+		<Command name="ВыполнитьКодНаСервере" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код на сервере</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьКодНаСервере</Action>
 		</Command>
 	</Commands>
 </Form>
