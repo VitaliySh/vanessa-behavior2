@@ -31,7 +31,7 @@
 	Команда.УстановитьПравильныйКодВозврата(0);
 
 	Если Не ПустаяСтрока(ОдинКаталог) Тогда
-		Если (Элемент) = "./epf" Или "vanessa-behavior.epf" ИЛИ "./build/vanessa-behavior.epf" Тогда
+		Если ОдинКаталог = "./epf" Или ОдинКаталог = "vanessa-behavior.epf" ИЛИ ОдинКаталог = "./build/vanessa-behavior.epf" Тогда
 			ШаблонЗапуска = СтрШаблон("oscript ./tools/runner.os decompileepf ./build/%2 %1 --ibname /F./build/ibservice", "./epf", "vanessa-behavior.epf");
 		Иначе
 			ШаблонЗапуска = СтрШаблон("oscript ./tools/runner.os decompileepf ./build/%1 %1", ОдинКаталог);

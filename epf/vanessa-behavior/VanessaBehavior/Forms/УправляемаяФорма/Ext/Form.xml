@@ -2705,6 +2705,7 @@
 										<ExtendedTooltip name="ДеревоТестовУправлениеПоискомРасширеннаяПодсказка" id="1282"/>
 									</SearchControlAddition>
 									<Events>
+										<Event name="Selection">ДеревоТестовВыбор</Event>
 										<Event name="BeforeAddRow">ДеревоТестовПередНачаломДобавления</Event>
 										<Event name="BeforeDeleteRow">ДеревоТестовПередУдалением</Event>
 										<Event name="OnActivateRow">ДеревоТестовПриАктивизацииСтроки</Event>
@@ -14406,6 +14407,15 @@
 								<v8:AllowedLength>Variable</v8:AllowedLength>
 							</v8:StringQualifiers>
 						</Type>
+					</Column>
+					<Column name="ДополнительныеДанные" id="8">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительные данные</v8:content>
+							</v8:item>
+						</Title>
+						<Type/>
 					</Column>
 				</AdditionalColumns>
 			</Columns>
