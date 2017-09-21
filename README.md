@@ -1,13 +1,16 @@
 ﻿# vanessa-behavior
 
-[![Открытый чат проекта https://gitter.im/silverbulleters/vanessa-behavoir](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/silverbulleters/vanessa-behavoir?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Открытый чат проекта https://gitter.im/silverbulleters/vanessa-behavoir](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/silverbulleters/vanessa-behavoir?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Vanessa-Behavior-Develop)](http://ci.silverbulleters.org/job/Vanessa-Behavior-Develop/)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/vanessa-services/localized.svg)](https://crowdin.com/project/vanessa-services)
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в ветке [Master: 1.0](https://github.com/silverbulleters/vanessa-behavior/tree/master)
-Разработка ведется в ветке [Develop](https://github.com/silverbulleters/vanessa-behavior/tree/develop). Эта же ветка является основной.
+Текущий релиз в разделе  [Releases](https://github.com/silverbulleters/vanessa-behavior2/releases/latest)
+
+Ночная сборка ветки **develop**:
+1. [zip](http://ci.silverbulleters.org/job/vanessa-behavior2/job/develop/lastSuccessfulBuild/artifact/vanessa-behavior.zip) - `unzip -o ./vanessa-behavior.zip`
+2. [tar.gz](http://ci.silverbulleters.org/job/vanessa-behavior2/job/develop/lastSuccessfulBuild/artifact/vanessa-behavior.tar.gz) - `tar xfv ./vanessa-behavior.tar.gz`
 
 Проект использует принцип формирования автодокументации в формате Markdown и видео.
 * Markdown инструкции лежат [здесь](https://github.com/silverbulleters/vanessa-services/tree/master/ru-RU/behavior/Features) 
@@ -182,7 +185,7 @@
 * мы используем подход git-flow для реализации функциональности
 * мы используем принцип самопроверки через feature файлы, поэтому перед разработкой новой функциональности мы также - разрабатываем feature файлы, генерируем шаблоны сценариев и наполняем их кодом для проверки. Поэтому к доработкам без feature файлов мы относимся "холодно".
 
-более подробно в файле [CONTRIBUTING.md](https://github.com/silverbulleters/vanessa-behavior-new/blob/master/CONTRIBUTING.md)
+более подробно в файле [CONTRIBUTING.md](./.github/CONTRIBUTING.md)
 
 ## Лицензии
 
@@ -216,8 +219,8 @@
 или 
 по телефону +7-(499)-346-70-19.
 
-[![ZenHub] (https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)] (https://zenhub.io)
+[![ZenHub](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)](https://zenhub.io)
 
 Контура сборки предоставлены
 
-[![DOcean] (https://www.digitalocean.com/assets/media/logos-badges/png/DO_Logo_Horizontal_Blue-3db19536.png)](https://m.do.co/c/2a3a0769ac84)
+[![DOcean](https://www.digitalocean.com/assets/media/logos-badges/png/DO_Logo_Horizontal_Blue-3db19536.png)](https://m.do.co/c/2a3a0769ac84)

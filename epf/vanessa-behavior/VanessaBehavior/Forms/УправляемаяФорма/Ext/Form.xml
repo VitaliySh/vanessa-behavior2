@@ -2705,6 +2705,7 @@
 										<ExtendedTooltip name="ДеревоТестовУправлениеПоискомРасширеннаяПодсказка" id="1282"/>
 									</SearchControlAddition>
 									<Events>
+										<Event name="Selection">ДеревоТестовВыбор</Event>
 										<Event name="BeforeAddRow">ДеревоТестовПередНачаломДобавления</Event>
 										<Event name="BeforeDeleteRow">ДеревоТестовПередУдалением</Event>
 										<Event name="OnActivateRow">ДеревоТестовПриАктивизацииСтроки</Event>
@@ -5208,6 +5209,28 @@
 														</Button>
 													</ChildItems>
 												</ButtonGroup>
+												<ButtonGroup name="ГруппаИсследовательФормы" id="1715">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа исследователь формы</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа исследователь формы</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаИсследовательФормыРасширеннаяПодсказка" id="1716"/>
+													<ChildItems>
+														<Button name="ИсследовательФормы" id="1713">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ИсследовательФормы</CommandName>
+															<ExtendedTooltip name="ИсследовательФормыРасширеннаяПодсказка" id="1714"/>
+														</Button>
+													</ChildItems>
+												</ButtonGroup>
 												<Button name="ПолучитьИзмененияФормыGherkin" id="357">
 													<Type>CommandBarButton</Type>
 													<CommandName>Form.Command.ПолучитьИзмененияФормыGherkin</CommandName>
@@ -5716,6 +5739,39 @@
 													</ToolTip>
 													<ExtendedTooltip name="СценарийПоведенияКодРасширеннаяПодсказка" id="1326"/>
 													<ChildItems>
+														<UsualGroup name="ГруппаВыполнитьКод" id="1720">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа выполнить код</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа выполнить код</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ExtendedTooltip name="ГруппаВыполнитьКодРасширеннаяПодсказка" id="1721"/>
+															<ChildItems>
+																<Button name="ВыполнитьКодНаКлиенте" id="1722">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.ВыполнитьКодНаКлиенте</CommandName>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Выполнить на клиенте</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="ВыполнитьКодНаКлиентеРасширеннаяПодсказка" id="1723"/>
+																</Button>
+																<Button name="ВыполнитьКодНаСервере" id="1724">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.ВыполнитьКодНаСервере</CommandName>
+																	<ExtendedTooltip name="ВыполнитьКодНаСервереРасширеннаяПодсказка" id="1725"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
 														<TextDocumentField name="СгенерированныйСценарийКод" id="854">
 															<DataPath>Объект.СгенерированныйСценарийКод</DataPath>
 															<TitleLocation>None</TitleLocation>
@@ -7794,6 +7850,32 @@
 																<Value xsi:type="xs:string">de</Value>
 															</xr:Value>
 														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Latvian</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">lv</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Italian</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">it</Value>
+															</xr:Value>
+														</xr:Item>
 													</ChoiceList>
 													<ContextMenu name="ЯзыкГенератораGherkinКонтекстноеМеню" id="1695"/>
 													<ExtendedTooltip name="ЯзыкГенератораGherkinРасширеннаяПодсказка" id="1696"/>
@@ -8017,7 +8099,7 @@
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Выполнять шаги асинхронно</v8:content>
+																			<v8:content>Обновлять состояние дерева при выполнении шагов</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
@@ -8097,6 +8179,16 @@
 																		</v8:item>
 																	</Title>
 																	<TitleLocation>Right</TitleLocation>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Если флаг выставлен - то это замедляет выполнение шагов, но позоволяет обновлять состояние дерева при выполнении каждого шага.</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>If the flag is set, it slows down the execution of the steps, but it allows you to update the state of the tree at each step.</v8:content>
+																		</v8:item>
+																	</ToolTip>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="ВыполнятьШагиАссинхронноКонтекстноеМеню" id="336"/>
 																	<ExtendedTooltip name="ВыполнятьШагиАссинхронноРасширеннаяПодсказка" id="1374"/>
@@ -13820,6 +13912,15 @@
 						</Page>
 					</ChildItems>
 				</Pages>
+				<InputField name="СтрокаСтатуса" id="1717">
+					<DataPath>СтрокаСтатуса</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="СтрокаСтатусаКонтекстноеМеню" id="1718"/>
+					<ExtendedTooltip name="СтрокаСтатусаРасширеннаяПодсказка" id="1719"/>
+				</InputField>
 				<UsualGroup name="ГруппаИнформация" id="1596">
 					<Title>
 						<v8:item>
@@ -14306,6 +14407,15 @@
 								<v8:AllowedLength>Variable</v8:AllowedLength>
 							</v8:StringQualifiers>
 						</Type>
+					</Column>
+					<Column name="ДополнительныеДанные" id="8">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительные данные</v8:content>
+							</v8:item>
+						</Title>
+						<Type/>
 					</Column>
 				</AdditionalColumns>
 			</Columns>
@@ -15531,6 +15641,21 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="СтрокаСтатуса" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка статуса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -16056,6 +16181,7 @@
 					<v8:content>Подключить TestClient</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>Ctrl+T</Shortcut>
 			<Action>ОткрытьПодключитьTestClient</Action>
 		</Command>
 		<Command name="УстановитьПометкуВыполнятьСценарийСЭтогоШага" id="12">
@@ -17926,6 +18052,127 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьСтрокуВСписокБиблиотек</Action>
+		</Command>
+		<Command name="ИсследовательФормы" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исследователь формы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Form explorer</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>am</v8:lang>
+					<v8:content>ወደ researcher ነው ቅጽ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Tədqiqatçı formaları</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>bg</v8:lang>
+					<v8:content>Изследовател форма</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>et</v8:lang>
+					<v8:content>Teadlane vormi</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>fr</v8:lang>
+					<v8:content>Le chercheur de la forme</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ka</v8:lang>
+					<v8:content>მკვლევარი არის ფორმა</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>de</v8:lang>
+					<v8:content>Forscher Formen</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>hu</v8:lang>
+					<v8:content>A kutató a forma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>it</v8:lang>
+					<v8:content>Ricercatore di forma</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lv</v8:lang>
+					<v8:content>Pētnieks formas</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>lt</v8:lang>
+					<v8:content>Mokslininkė formos</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>mn</v8:lang>
+					<v8:content>Тус судлаач нь хэлбэр</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>pl</v8:lang>
+					<v8:content>Badacz formy</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ro</v8:lang>
+					<v8:content>Cercetător forme</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sl</v8:lang>
+					<v8:content>Raziskovalec je obrazca</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es</v8:lang>
+					<v8:content>El investigador del formulario</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Forskaren är den form</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>tr</v8:lang>
+					<v8:content>Araştırmacı formu</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исследователь формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсследовательФормы</Action>
+		</Command>
+		<Command name="ВыполнитьКодНаКлиенте" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код на клиенте</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код на клиенте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьКодНаКлиенте</Action>
+		</Command>
+		<Command name="ВыполнитьКодНаСервере" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код на сервере</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьКодНаСервере</Action>
 		</Command>
 	</Commands>
 </Form>
