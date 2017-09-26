@@ -151,7 +151,7 @@ tasks["report"] = {
                 unstash "${it}"
             }
             try{
-                allure commandline: 'Maven Installer', includeProperties: false, jdk: '', results: [[path: 'build/ServiceBases/allurereport/']]
+                allure commandline: 'allure2', includeProperties: false, jdk: '', results: [[path: 'build/ServiceBases/allurereport/']]
             } catch (e) {
                 echo "behavior status : ${e}"
             }
