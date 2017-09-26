@@ -7876,6 +7876,19 @@
 																<Value xsi:type="xs:string">it</Value>
 															</xr:Value>
 														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Polish</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">pl</Value>
+															</xr:Value>
+														</xr:Item>
 													</ChoiceList>
 													<ContextMenu name="ЯзыкГенератораGherkinКонтекстноеМеню" id="1695"/>
 													<ExtendedTooltip name="ЯзыкГенератораGherkinРасширеннаяПодсказка" id="1696"/>
