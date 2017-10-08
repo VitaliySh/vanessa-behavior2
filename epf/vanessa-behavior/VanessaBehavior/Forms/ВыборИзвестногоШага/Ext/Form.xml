@@ -248,41 +248,78 @@
 				<Event name="Selection">ДеревоШаговВыбор</Event>
 			</Events>
 			<ChildItems>
-				<InputField name="ДеревоШаговТипШага" id="14">
-					<DataPath>ДеревоШагов.ТипШага</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<Width>15</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="ДеревоШаговТипШагаКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="ДеревоШаговТипШагаРасширеннаяПодсказка" id="63"/>
-				</InputField>
-				<InputField name="ДеревоШаговПредставлениеТеста" id="20">
-					<DataPath>ДеревоШагов.ПредставлениеТеста</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДеревоШаговПредставлениеТестаКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="ДеревоШаговПредставлениеТестаРасширеннаяПодсказка" id="64"/>
-				</InputField>
-				<InputField name="ДеревоШаговОписаниеШага" id="23">
-					<DataPath>ДеревоШагов.ОписаниеШага</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДеревоШаговОписаниеШагаКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="ДеревоШаговОписаниеШагаРасширеннаяПодсказка" id="65"/>
-				</InputField>
-				<InputField name="ДеревоШаговПолныйТипШага" id="26">
-					<DataPath>ДеревоШагов.ПолныйТипШага</DataPath>
-					<Visible>false</Visible>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДеревоШаговПолныйТипШагаКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="ДеревоШаговПолныйТипШагаРасширеннаяПодсказка" id="66"/>
-				</InputField>
-				<InputField name="ДеревоШаговИмяEPF" id="29">
-					<DataPath>ДеревоШагов.ИмяФайла</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<Width>10</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="ДеревоШаговИмяEPFКонтекстноеМеню" id="30"/>
-					<ExtendedTooltip name="ДеревоШаговИмяEPFРасширеннаяПодсказка" id="67"/>
-				</InputField>
+				<ColumnGroup name="ДеревоШаговГруппаТипШага" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип шага</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип шага</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДеревоШаговГруппаТипШагаРасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<InputField name="ДеревоШаговТипШага" id="14">
+							<DataPath>ДеревоШагов.ТипШага</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>15</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ДеревоШаговТипШагаКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ДеревоШаговТипШагаРасширеннаяПодсказка" id="63"/>
+						</InputField>
+						<ColumnGroup name="ДеревоШаговГруппаОписаниеШага" id="74">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание шага</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание шага</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ДеревоШаговГруппаОписаниеШагаРасширеннаяПодсказка" id="75"/>
+							<ChildItems>
+								<InputField name="ДеревоШаговПредставлениеТеста" id="20">
+									<DataPath>ДеревоШагов.ПредставлениеТеста</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoCellHeight>true</AutoCellHeight>
+									<ContextMenu name="ДеревоШаговПредставлениеТестаКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ДеревоШаговПредставлениеТестаРасширеннаяПодсказка" id="64"/>
+								</InputField>
+								<InputField name="ДеревоШаговОписаниеШага" id="23">
+									<DataPath>ДеревоШагов.ОписаниеШага</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoCellHeight>true</AutoCellHeight>
+									<ContextMenu name="ДеревоШаговОписаниеШагаКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ДеревоШаговОписаниеШагаРасширеннаяПодсказка" id="65"/>
+								</InputField>
+								<InputField name="ДеревоШаговПолныйТипШага" id="26">
+									<DataPath>ДеревоШагов.ПолныйТипШага</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоШаговПолныйТипШагаКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ДеревоШаговПолныйТипШагаРасширеннаяПодсказка" id="66"/>
+								</InputField>
+								<InputField name="ДеревоШаговИмяEPF" id="29">
+									<DataPath>ДеревоШагов.ИмяФайла</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ДеревоШаговИмяEPFКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ДеревоШаговИмяEPFРасширеннаяПодсказка" id="67"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -1252,6 +1289,63 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:Color">web:HoneyDew</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоШаговПредставлениеТеста</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоШаговОписаниеШага</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоШаговПолныйТипШага</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоШаговИмяEPF</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоШагов.ТипШага</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоШаговТипШага</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоШагов.ТипШага</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>

@@ -5641,6 +5641,11 @@
 																		</Title>
 																		<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюРедактироватьТаблицуТекстРасширеннаяПодсказка" id="1604"/>
 																	</Button>
+																	<Button name="СгенерированныйСценарийКонтекстноеМенюПолучитьМакетПоТаблице" id="1720">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ПолучитьМакетПоТаблице</CommandName>
+																		<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюПолучитьМакетПоТаблицеРасширеннаяПодсказка" id="1721"/>
+																	</Button>
 																</ChildItems>
 															</ContextMenu>
 															<ExtendedTooltip name="СгенерированныйСценарийРасширеннаяПодсказка" id="1325"/>
@@ -6870,12 +6875,23 @@
 										<Event name="AfterDeleteRow">ДанныеКлиентовТестированияПослеУдаления</Event>
 									</Events>
 									<ChildItems>
-										<InputField name="ДанныеКлиентовТестированияИмя" id="975">
-											<DataPath>ДанныеКлиентовТестирования.Имя</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ДанныеКлиентовТестированияИмяКонтекстноеМеню" id="976"/>
-											<ExtendedTooltip name="ДанныеКлиентовТестированияИмяРасширеннаяПодсказка" id="1351"/>
-										</InputField>
+										<ColumnGroup name="ДанныеКлиентовТестированияГруппа4" id="1725">
+											<ExtendedTooltip name="ДанныеКлиентовТестированияГруппа4РасширеннаяПодсказка" id="1726"/>
+											<ChildItems>
+												<InputField name="ДанныеКлиентовТестированияИмя" id="975">
+													<DataPath>ДанныеКлиентовТестирования.Имя</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДанныеКлиентовТестированияИмяКонтекстноеМеню" id="976"/>
+													<ExtendedTooltip name="ДанныеКлиентовТестированияИмяРасширеннаяПодсказка" id="1351"/>
+												</InputField>
+												<InputField name="ДанныеКлиентовТестированияСиноним" id="1722">
+													<DataPath>ДанныеКлиентовТестирования.Синоним</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДанныеКлиентовТестированияСинонимКонтекстноеМеню" id="1723"/>
+													<ExtendedTooltip name="ДанныеКлиентовТестированияСинонимРасширеннаяПодсказка" id="1724"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
 										<ColumnGroup name="ДанныеКлиентовТестированияГруппа2" id="1001">
 											<ExtendedTooltip name="ДанныеКлиентовТестированияГруппа2РасширеннаяПодсказка" id="1352"/>
 											<ChildItems>
@@ -15275,6 +15291,25 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="Синоним" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синоним</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Synonym</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ЕстьЗащитаОтОпасныхДействий" id="19">
@@ -18113,6 +18148,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИсследовательФормы</Action>
+		</Command>
+		<Command name="ПолучитьМакетПоТаблице" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить макет по таблице</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get a table document from the table</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить макет по таблице</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьМакетПоТаблице</Action>
 		</Command>
 	</Commands>
 </Form>
