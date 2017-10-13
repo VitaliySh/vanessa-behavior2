@@ -115,7 +115,7 @@
 	Контекст.Вставить("ИмяТестовойФичи",ИмяФичи);
 	
 	ОткрытаяФормаVanessaBehavoir            = Контекст.ОткрытаяФормаVanessaBehavoir;
-	ПутьКФиче = ОткрытаяФормаVanessaBehavoir.Объект.КаталогИнструментов + "/features/support/templates/" + ИмяФичи + ".feature";
+	ПутьКФиче = ОткрытаяФормаVanessaBehavoir.Объект.КаталогИнструментов + "/features/Support/Templates/" + ИмяФичи + ".feature";
 	Контекст.Вставить("ПутьКФиче",ПутьКФиче);
 	
 	

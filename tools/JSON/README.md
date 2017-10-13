@@ -16,7 +16,7 @@
    "ПутьКVanessaBehavior": ".\..\vanessa-behavior.epf",
    "КаталогФич": ".\..\features",
    "КаталогиБиблиотек":[
-   ".\..\features\Libraries"
+   ".\..\features\libraries"
    ],
    "EpfДляИнициализацияБазы": ".\epf\init.epf",
    "ПараметрыДляИнициализацияБазы": ".\epf\init.json",
