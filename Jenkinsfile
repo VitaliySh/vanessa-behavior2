@@ -93,6 +93,7 @@ firsttasks=[:]
 firsttasks["linuxbuild"] = {
 node("slavelinux"){
     stage ("checkout scm") {
+        cleanWs();
         unix = isUnix();
             if (!unix) {
                 command = "git config --local core.longpaths true"
