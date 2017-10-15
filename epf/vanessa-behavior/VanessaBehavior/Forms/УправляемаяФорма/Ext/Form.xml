@@ -2705,7 +2705,6 @@
 										<ExtendedTooltip name="ДеревоТестовУправлениеПоискомРасширеннаяПодсказка" id="1282"/>
 									</SearchControlAddition>
 									<Events>
-										<Event name="Selection">ДеревоТестовВыбор</Event>
 										<Event name="BeforeAddRow">ДеревоТестовПередНачаломДобавления</Event>
 										<Event name="BeforeDeleteRow">ДеревоТестовПередУдалением</Event>
 										<Event name="OnActivateRow">ДеревоТестовПриАктивизацииСтроки</Event>
@@ -5642,6 +5641,11 @@
 																		</Title>
 																		<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюРедактироватьТаблицуТекстРасширеннаяПодсказка" id="1604"/>
 																	</Button>
+																	<Button name="СгенерированныйСценарийКонтекстноеМенюПолучитьМакетПоТаблице" id="1720">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ПолучитьМакетПоТаблице</CommandName>
+																		<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюПолучитьМакетПоТаблицеРасширеннаяПодсказка" id="1721"/>
+																	</Button>
 																</ChildItems>
 															</ContextMenu>
 															<ExtendedTooltip name="СгенерированныйСценарийРасширеннаяПодсказка" id="1325"/>
@@ -5739,7 +5743,7 @@
 													</ToolTip>
 													<ExtendedTooltip name="СценарийПоведенияКодРасширеннаяПодсказка" id="1326"/>
 													<ChildItems>
-														<UsualGroup name="ГруппаВыполнитьКод" id="1720">
+														<UsualGroup name="ГруппаВыполнитьКод" id="1727">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
@@ -5752,23 +5756,30 @@
 																	<v8:content>Группа выполнить код</v8:content>
 																</v8:item>
 															</ToolTip>
-															<ExtendedTooltip name="ГруппаВыполнитьКодРасширеннаяПодсказка" id="1721"/>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаВыполнитьКодРасширеннаяПодсказка" id="1728"/>
 															<ChildItems>
-																<Button name="ВыполнитьКодНаКлиенте" id="1722">
+																<Button name="ВыполнитьКодНаКлиенте" id="1729">
 																	<Type>UsualButton</Type>
-																	<CommandName>Form.Command.ВыполнитьКодНаКлиенте</CommandName>
+																	<CommandName>Form.Command.ВыполнитьКодПоведенияНаКлиенте</CommandName>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
 																			<v8:content>Выполнить на клиенте</v8:content>
 																		</v8:item>
 																	</Title>
-																	<ExtendedTooltip name="ВыполнитьКодНаКлиентеРасширеннаяПодсказка" id="1723"/>
+																	<ExtendedTooltip name="ВыполнитьКодНаКлиентеРасширеннаяПодсказка" id="1730"/>
 																</Button>
-																<Button name="ВыполнитьКодНаСервере" id="1724">
+																<Button name="ВыполнитьКодНаСервере" id="1731">
 																	<Type>UsualButton</Type>
-																	<CommandName>Form.Command.ВыполнитьКодНаСервере</CommandName>
-																	<ExtendedTooltip name="ВыполнитьКодНаСервереРасширеннаяПодсказка" id="1725"/>
+																	<CommandName>Form.Command.ВыполнитьКодПоведенияНаСервере</CommandName>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Выполнить на сервере</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="ВыполнитьКодНаСервереРасширеннаяПодсказка" id="1732"/>
 																</Button>
 															</ChildItems>
 														</UsualGroup>
@@ -6904,12 +6915,23 @@
 										<Event name="AfterDeleteRow">ДанныеКлиентовТестированияПослеУдаления</Event>
 									</Events>
 									<ChildItems>
-										<InputField name="ДанныеКлиентовТестированияИмя" id="975">
-											<DataPath>ДанныеКлиентовТестирования.Имя</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ДанныеКлиентовТестированияИмяКонтекстноеМеню" id="976"/>
-											<ExtendedTooltip name="ДанныеКлиентовТестированияИмяРасширеннаяПодсказка" id="1351"/>
-										</InputField>
+										<ColumnGroup name="ДанныеКлиентовТестированияГруппа4" id="1725">
+											<ExtendedTooltip name="ДанныеКлиентовТестированияГруппа4РасширеннаяПодсказка" id="1726"/>
+											<ChildItems>
+												<InputField name="ДанныеКлиентовТестированияИмя" id="975">
+													<DataPath>ДанныеКлиентовТестирования.Имя</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДанныеКлиентовТестированияИмяКонтекстноеМеню" id="976"/>
+													<ExtendedTooltip name="ДанныеКлиентовТестированияИмяРасширеннаяПодсказка" id="1351"/>
+												</InputField>
+												<InputField name="ДанныеКлиентовТестированияСиноним" id="1722">
+													<DataPath>ДанныеКлиентовТестирования.Синоним</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДанныеКлиентовТестированияСинонимКонтекстноеМеню" id="1723"/>
+													<ExtendedTooltip name="ДанныеКлиентовТестированияСинонимРасширеннаяПодсказка" id="1724"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
 										<ColumnGroup name="ДанныеКлиентовТестированияГруппа2" id="1001">
 											<ExtendedTooltip name="ДанныеКлиентовТестированияГруппа2РасширеннаяПодсказка" id="1352"/>
 											<ChildItems>
@@ -7874,6 +7896,19 @@
 																	</v8:item>
 																</Presentation>
 																<Value xsi:type="xs:string">it</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Polish</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">pl</Value>
 															</xr:Value>
 														</xr:Item>
 													</ChoiceList>
@@ -15305,6 +15340,25 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="Синоним" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синоним</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Synonym</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ЕстьЗащитаОтОпасныхДействий" id="19">
@@ -18144,32 +18198,51 @@
 			</ToolTip>
 			<Action>ИсследовательФормы</Action>
 		</Command>
-		<Command name="ВыполнитьКодНаКлиенте" id="66">
+		<Command name="ПолучитьМакетПоТаблице" id="66">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить код на клиенте</v8:content>
+					<v8:content>Получить макет по таблице</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get a table document from the table</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить код на клиенте</v8:content>
+					<v8:content>Получить макет по таблице</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьМакетПоТаблице</Action>
+		</Command>
+		<Command name="ВыполнитьКодПоведенияНаКлиенте" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код поведения на клиенте</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняет введенный код на клиенте, автоматически присвоив переменной Ванесса = ЭтаФорма</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ВыполнитьКодНаКлиенте</Action>
 		</Command>
-		<Command name="ВыполнитьКодНаСервере" id="67">
+		<Command name="ВыполнитьКодПоведенияНаСервере" id="68">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить на сервере</v8:content>
+					<v8:content>Выполнить код поведения на сервере</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить код на сервере</v8:content>
+					<v8:content>Выполнить код поведения на сервере</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ВыполнитьКодНаСервере</Action>
