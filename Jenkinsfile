@@ -16,6 +16,7 @@ builds.each{
     tasks["behavior ${it}"] = {
         node ("slave") {
             stage("behavior ${it}") {
+                cleanWs();
                 //git url: 'https://github.com/silverbulleters/vanessa-behavior2.git'
                 checkout scm
                 unstash "buildResults"
