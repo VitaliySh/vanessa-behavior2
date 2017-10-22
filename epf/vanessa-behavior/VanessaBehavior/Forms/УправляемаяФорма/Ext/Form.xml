@@ -5646,6 +5646,11 @@
 																		<CommandName>Form.Command.ПолучитьМакетПоТаблице</CommandName>
 																		<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюПолучитьМакетПоТаблицеРасширеннаяПодсказка" id="1721"/>
 																	</Button>
+																	<Button name="СгенерированныйСценарийКонтекстноеМенюОчиститьСгенерированныйСценарий" id="1745">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ОчиститьСгенерированныйСценарий</CommandName>
+																		<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюОчиститьСгенерированныйСценарийРасширеннаяПодсказка" id="1746"/>
+																	</Button>
 																</ChildItems>
 															</ContextMenu>
 															<ExtendedTooltip name="СгенерированныйСценарийРасширеннаяПодсказка" id="1325"/>
@@ -5743,7 +5748,7 @@
 													</ToolTip>
 													<ExtendedTooltip name="СценарийПоведенияКодРасширеннаяПодсказка" id="1326"/>
 													<ChildItems>
-														<UsualGroup name="ГруппаВыполнитьКод" id="1727">
+														<UsualGroup name="ГруппаВыполнитьКод" id="1744">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
@@ -5757,9 +5762,9 @@
 																</v8:item>
 															</ToolTip>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаВыполнитьКодРасширеннаяПодсказка" id="1728"/>
+															<ExtendedTooltip name="ГруппаВыполнитьКодРасширеннаяПодсказка" id="1745"/>
 															<ChildItems>
-																<Button name="ВыполнитьКодНаКлиенте" id="1729">
+																<Button name="ВыполнитьКодНаКлиенте" id="1746">
 																	<Type>UsualButton</Type>
 																	<CommandName>Form.Command.ВыполнитьКодПоведенияНаКлиенте</CommandName>
 																	<Title>
@@ -5768,9 +5773,9 @@
 																			<v8:content>Выполнить на клиенте</v8:content>
 																		</v8:item>
 																	</Title>
-																	<ExtendedTooltip name="ВыполнитьКодНаКлиентеРасширеннаяПодсказка" id="1730"/>
+																	<ExtendedTooltip name="ВыполнитьКодНаКлиентеРасширеннаяПодсказка" id="1747"/>
 																</Button>
-																<Button name="ВыполнитьКодНаСервере" id="1731">
+																<Button name="ВыполнитьКодНаСервере" id="1748">
 																	<Type>UsualButton</Type>
 																	<CommandName>Form.Command.ВыполнитьКодПоведенияНаСервере</CommandName>
 																	<Title>
@@ -5779,7 +5784,7 @@
 																			<v8:content>Выполнить на сервере</v8:content>
 																		</v8:item>
 																	</Title>
-																	<ExtendedTooltip name="ВыполнитьКодНаСервереРасширеннаяПодсказка" id="1732"/>
+																	<ExtendedTooltip name="ВыполнитьКодНаСервереРасширеннаяПодсказка" id="1749"/>
 																</Button>
 															</ChildItems>
 														</UsualGroup>
@@ -10760,7 +10765,8 @@
 														</v8:item>
 													</ToolTip>
 													<Group>Vertical</Group>
-													<Representation>StrongSeparation</Representation>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="HTMLИMarkdownРасширеннаяПодсказка" id="1403"/>
 													<ChildItems>
 														<UsualGroup name="ГруппаHTML" id="513">
@@ -11175,7 +11181,8 @@
 														</v8:item>
 													</ToolTip>
 													<Group>Vertical</Group>
-													<Representation>StrongSeparation</Representation>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="РаботаСВидеоРасширеннаяПодсказка" id="1410"/>
 													<ChildItems>
 														<UsualGroup name="ГруппаВидео" id="515">
@@ -12419,7 +12426,6 @@
 																				</v8:item>
 																			</ToolTip>
 																			<Group>Vertical</Group>
-																			<Representation>StrongSeparation</Representation>
 																			<ExtendedTooltip name="ОзвучкаГолосомРасширеннаяПодсказка" id="1429"/>
 																			<ChildItems>
 																				<CheckBoxField name="ЗаписьВидеоДелатьНаложениеTTS" id="686">
@@ -12693,98 +12699,74 @@
 																					<ContextMenu name="ЗаписьВидеоИмяTTSКонтекстноеМеню" id="693"/>
 																					<ExtendedTooltip name="ЗаписьВидеоИмяTTSРасширеннаяПодсказка" id="1432"/>
 																				</InputField>
-																				<InputField name="ЗаписьВидеоСловарьЗамен" id="695">
+																				<Table name="ЗаписьВидеоСловарьЗамен" id="1727">
+																					<Representation>List</Representation>
+																					<TitleLocation>Top</TitleLocation>
+																					<Header>false</Header>
+																					<HorizontalLines>false</HorizontalLines>
+																					<VerticalLines>false</VerticalLines>
+																					<AutoInsertNewRow>true</AutoInsertNewRow>
 																					<DataPath>Объект.ЗаписьВидеоСловарьЗамен</DataPath>
+																					<RowPictureDataPath>Объект.ЗаписьВидеоСловарьЗамен.Picture</RowPictureDataPath>
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>Путь к словарю замен</v8:content>
+																							<v8:content>Словари замен</v8:content>
 																						</v8:item>
 																						<v8:item>
 																							<v8:lang>en</v8:lang>
-																							<v8:content>Path to replacement dictionary</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>am</v8:lang>
-																							<v8:content>መንገዱ ወደ መዝገበ ቃላት replacements</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>az</v8:lang>
-																							<v8:content>Yol lüğət.</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>bg</v8:lang>
-																							<v8:content>Пътят към речника заместители</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>et</v8:lang>
-																							<v8:content>Tee sõnastik asendused</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>fr</v8:lang>
-																							<v8:content>Le chemin d'accès à un dictionnaire de remplacement</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>ka</v8:lang>
-																							<v8:content>გზა ლექსიკონი გადაჯგუფების</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>de</v8:lang>
-																							<v8:content>Der Weg zum Wortschatz der Ersatz</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>hu</v8:lang>
-																							<v8:content>Az út, hogy a szótár csere</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>it</v8:lang>
-																							<v8:content>Il percorso al dizionario sostituzioni</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>lv</v8:lang>
-																							<v8:content>Ceļš uz vārdnīcu protēzes</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>lt</v8:lang>
-																							<v8:content>Kelias į žodyną pavadavimų</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>mn</v8:lang>
-																							<v8:content>Зам толь орлогч</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>pl</v8:lang>
-																							<v8:content>Ścieżka do słownika zamienników</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>ro</v8:lang>
-																							<v8:content>Calea dicționar înlocuiri</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>sl</v8:lang>
-																							<v8:content>Pot do zamenjave slovar</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>es</v8:lang>
-																							<v8:content>La ruta de acceso a un diccionario de reemplazo</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>sv</v8:lang>
-																							<v8:content>Vägen till ordlistan ersättare</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>tr</v8:lang>
-																							<v8:content>Yol sözlük değiştirmeleri</v8:content>
+																							<v8:content>Dictionaries replacement</v8:content>
 																						</v8:item>
 																					</Title>
-																					<ChoiceButton>true</ChoiceButton>
-																					<ClearButton>true</ClearButton>
-																					<ContextMenu name="ЗаписьВидеоСловарьЗаменКонтекстноеМеню" id="696"/>
-																					<ExtendedTooltip name="ЗаписьВидеоСловарьЗаменРасширеннаяПодсказка" id="1433"/>
-																					<Events>
-																						<Event name="StartChoice">ЗаписьВидеоСловарьЗаменНачалоВыбора</Event>
-																					</Events>
-																				</InputField>
+																					<ContextMenu name="ЗаписьВидеоСловарьЗаменКонтекстноеМеню" id="1728"/>
+																					<AutoCommandBar name="ЗаписьВидеоСловарьЗаменКоманднаяПанель" id="1729">
+																						<Autofill>false</Autofill>
+																						<ChildItems>
+																							<Button name="ЗаписьВидеоСловарьЗаменДобавитьСтрокуВСписокСловарейЗамен" id="1743">
+																								<Type>CommandBarButton</Type>
+																								<CommandName>Form.Command.ДобавитьСтрокуВСписокСловарейЗамен</CommandName>
+																								<ExtendedTooltip name="ЗаписьВидеоСловарьЗаменДобавитьСтрокуВСписокСловарейЗаменРасширеннаяПодсказка" id="1744"/>
+																							</Button>
+																						</ChildItems>
+																					</AutoCommandBar>
+																					<ExtendedTooltip name="ЗаписьВидеоСловарьЗаменРасширеннаяПодсказка" id="1730"/>
+																					<SearchStringAddition name="ЗаписьВидеоСловарьЗаменСтрокаПоиска" id="1731">
+																						<AdditionSource>
+																							<Item>ЗаписьВидеоСловарьЗамен</Item>
+																							<Type>SearchStringRepresentation</Type>
+																						</AdditionSource>
+																						<ContextMenu name="ЗаписьВидеоСловарьЗаменСтрокаПоискаКонтекстноеМеню" id="1732"/>
+																						<ExtendedTooltip name="ЗаписьВидеоСловарьЗаменСтрокаПоискаРасширеннаяПодсказка" id="1733"/>
+																					</SearchStringAddition>
+																					<ViewStatusAddition name="ЗаписьВидеоСловарьЗаменСостояниеПросмотра" id="1734">
+																						<AdditionSource>
+																							<Item>ЗаписьВидеоСловарьЗамен</Item>
+																							<Type>ViewStatusRepresentation</Type>
+																						</AdditionSource>
+																						<ContextMenu name="ЗаписьВидеоСловарьЗаменСостояниеПросмотраКонтекстноеМеню" id="1735"/>
+																						<ExtendedTooltip name="ЗаписьВидеоСловарьЗаменСостояниеПросмотраРасширеннаяПодсказка" id="1736"/>
+																					</ViewStatusAddition>
+																					<SearchControlAddition name="ЗаписьВидеоСловарьЗаменУправлениеПоиском" id="1737">
+																						<AdditionSource>
+																							<Item>ЗаписьВидеоСловарьЗамен</Item>
+																							<Type>SearchControl</Type>
+																						</AdditionSource>
+																						<ContextMenu name="ЗаписьВидеоСловарьЗаменУправлениеПоискомКонтекстноеМеню" id="1738"/>
+																						<ExtendedTooltip name="ЗаписьВидеоСловарьЗаменУправлениеПоискомРасширеннаяПодсказка" id="1739"/>
+																					</SearchControlAddition>
+																					<ChildItems>
+																						<InputField name="ЗаписьВидеоСловарьЗаменЗначение" id="1740">
+																							<DataPath>Объект.ЗаписьВидеоСловарьЗамен.Value</DataPath>
+																							<TitleLocation>Top</TitleLocation>
+																							<EditMode>EnterOnInput</EditMode>
+																							<ContextMenu name="ЗаписьВидеоСловарьЗаменЗначениеКонтекстноеМеню" id="1741"/>
+																							<ExtendedTooltip name="ЗаписьВидеоСловарьЗаменЗначениеРасширеннаяПодсказка" id="1742"/>
+																							<Events>
+																								<Event name="StartChoice">ЗаписьВидеоСловарьЗаменЗначениеНачалоВыбора</Event>
+																							</Events>
+																						</InputField>
+																					</ChildItems>
+																				</Table>
 																			</ChildItems>
 																		</UsualGroup>
 																	</ChildItems>
@@ -14457,6 +14439,23 @@
 							</v8:item>
 						</Title>
 						<Type/>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.ЗаписьВидеоСловарьЗамен">
+					<Column name="Путь" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Путь</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
 					</Column>
 				</AdditionalColumns>
 			</Columns>
@@ -18208,7 +18207,45 @@
 			</ToolTip>
 			<Action>ПолучитьМакетПоТаблице</Action>
 		</Command>
-		<Command name="ВыполнитьКодПоведенияНаКлиенте" id="67">
+		<Command name="ДобавитьСтрокуВСписокСловарейЗамен" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить строку в список словарей замен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьСтрокуВСписокСловарейЗамен</Action>
+		</Command>
+		<Command name="ОчиститьСгенерированныйСценарий" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить сгенерированный сценарий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьСгенерированныйСценарий</Action>
+		</Command>
+		<Command name="ВыполнитьКодПоведенияНаКлиенте" id="69">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -18223,7 +18260,7 @@
 			</ToolTip>
 			<Action>ВыполнитьКодНаКлиенте</Action>
 		</Command>
-		<Command name="ВыполнитьКодПоведенияНаСервере" id="68">
+		<Command name="ВыполнитьКодПоведенияНаСервере" id="70">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
