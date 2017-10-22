@@ -4,7 +4,9 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
 def tasks = [:]
 def buildSerivceConf = ["836UF":"8.3.6", "837UF":"8.3.7", "838UF":"8.3.8", "839UF":"8.3.9", "8310UF":"8.3.10"];
 //builds = ["82OF", "82UF", "836OF", "836UF", "837UF", "838UF", "839UF", "8310UF"]
-builds = ["836UF", "837UF", "838UF", "839UF", "8310UF"]
+//builds = ["836UF", "837UF", "838UF", "839UF", "8310UF"]
+builds = ["8310UF"]
+
 if (env.filterBuilds && env.filterBuilds.length() > 0 ) {
     println "filter build";
     builds = builds.findAll{it.contains(env.filterBuilds) || env.filterBuilds.contains(it)};
@@ -14,6 +16,7 @@ builds.each{
     tasks["behavior ${it}"] = {
         node ("slave") {
             stage("behavior ${it}") {
+                //cleanWs();
                 //git url: 'https://github.com/silverbulleters/vanessa-behavior2.git'
                 checkout scm
                 unstash "buildResults"
@@ -99,7 +102,7 @@ firsttasks=[:]
 firsttasks["linuxbuild"] = {
 node("slavelinux"){
     stage ("checkout scm") {
-        cleanWs();
+        //cleanWs();
         unix = isUnix();
             if (!unix) {
                 command = "git config --local core.longpaths true"
@@ -116,7 +119,7 @@ node("slavelinux"){
         command = 'sudo docker run --detach -e XVFB_RESOLUTION=1920x1080x24 --volume="${PWD}":/home/ubuntu/code onec32/client:8.3.10.2466 client > /tmp/container_id_${BUILD_NUMBER}';
         echo command;
         cmd(command, unix);
-sh 'sleep 10'
+        sh 'sleep 10'
         sh 'sudo docker exec -u ubuntu "$(cat /tmp/container_id_${BUILD_NUMBER})" /bin/bash -c "cd /home/ubuntu/code; DISPLAY=:1.0 sudo opm install && sudo opm update -all"'
         sh 'sudo docker exec -u ubuntu "$(cat /tmp/container_id_${BUILD_NUMBER})" /bin/bash -c "cd /home/ubuntu/code; DISPLAY=:1.0 opm run init && opm run clean"'
         sh 'sudo rm -f vanessa-behavior*.ospx'
@@ -153,6 +156,7 @@ tasks = [:]
 tasks["report"] = {
     node {
         stage("report"){
+            cleanWs();
             unstash 'buildResults'
             builds.each{
                 unstash "${it}"
@@ -164,7 +168,7 @@ tasks["report"] = {
             }
             
             junit 'build/ServiceBases/junitreport/*.xml'
-            cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'build/ServiceBases/cucumber'
+            //cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'build/ServiceBases/cucumber'
         }
     }
 }
