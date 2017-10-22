@@ -13781,7 +13781,13 @@
 												</CheckBoxField>
 												<Button name="СохранитьНастройкиКлиент" id="1670">
 													<Type>UsualButton</Type>
-													<CommandName>Form.Command.СохранитьНастройкиКлиент</CommandName>
+													<CommandName>Form.Command.КомандаСохранитьНастройки</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сохранить настройки</v8:content>
+														</v8:item>
+													</Title>
 													<ExtendedTooltip name="СохранитьНастройкиКлиентРасширеннаяПодсказка" id="1671"/>
 												</Button>
 											</ChildItems>
@@ -18076,21 +18082,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВычислитьPIDЭтогоСеанса</Action>
-		</Command>
-		<Command name="СохранитьНастройкиКлиент" id="63">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сохранить настройки клиент</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сохранить настройки клиент</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>СохранитьНастройкиКлиент</Action>
 		</Command>
 		<Command name="ДобавитьСтрокуВСписокБиблиотек" id="64">
 			<Title>
