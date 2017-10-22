@@ -166,7 +166,8 @@
 		ПеревестиФайлыВНижнийРегистр(СтрШаблон("./build/vanessa-behavior/%1", Элемент.Ключ));
 	КонецЦикла;
 
-	ПереместитьФайл("./build/vanessa-behavior/feature/Libraries", "./build/vanessa-behavior/feature/libraries");
+	ПереместитьФайл("./build/vanessa-behavior/features/Libraries", "./build/vanessa-behavior/features/libraries");
+	ПереместитьФайл("./build/vanessa-behavior/lib/FeatureReader", "./build/vanessa-behavior/lib/featurereader");
 	//ПереместитьФайл("./build/vanessa-behavior/feature/Libraries", "./build/vanessa-behavior/feature/libraries");
 		
 	Для каждого Элемент из МассивФайловДляПеремещения Цикл
