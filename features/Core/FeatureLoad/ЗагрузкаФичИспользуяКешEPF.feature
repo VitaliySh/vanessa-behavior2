@@ -3,7 +3,6 @@
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
-@NotOnSRC
 
 Функциональность: Загрузка epf с использованием кеш известных step definitions
 	Как Разработчик

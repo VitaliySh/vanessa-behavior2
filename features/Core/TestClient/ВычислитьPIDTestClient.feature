@@ -3,7 +3,6 @@
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
-@IgnoreOnLinux
 
 @tree
 

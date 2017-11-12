@@ -3,9 +3,6 @@
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
-@IgnoreOnLinux
-
-#FIXME: исправить под linux, т.к. второй сеанс не успевает подключится.
 
 @tree
 

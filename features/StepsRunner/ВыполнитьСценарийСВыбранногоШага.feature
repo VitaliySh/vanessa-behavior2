@@ -3,8 +3,6 @@
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 @tree
-@IgnoreOnCIMainBuild
-@NotOnSRC
 
 Функционал: Проверка выполнения сценария с выбранного шага
 	Как Разработчик
