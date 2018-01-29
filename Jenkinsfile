@@ -80,7 +80,7 @@ firsttasks=[:]
                         if (unix) {
                             cmd(sonarcommand, unix)
                         } else {
-                            echo "${sonarcommand}"
+                            //echo "${sonarcommand}"
                             bat "${sonarcommand}"
                             //cmd(sonarcommand, unix)
                         }
